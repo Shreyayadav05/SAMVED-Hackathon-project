@@ -1,0 +1,7 @@
+{
+  "name": "EquiFlow AI - Smart Water Pressure Management",
+  "description": "AI-powered IoT system for equitable water distribution and pressure optimization in Solapur Municipal Corporation.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
