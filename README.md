@@ -1,68 +1,115 @@
 # 🥇 EquiFlow AI: Smart Water Pressure Management
 
-> **Municipal-grade Constrained Optimization for Equitable Water Distribution.**
+# 💧 Intelligent Water Management System
 
-EquiFlow AI is a next-generation water management platform designed to solve the "last-mile" pressure imbalance in urban water networks. By combining **Deterministic Mathematical Optimization** with **AI-driven Anomaly Detection**, EquiFlow ensures equitable water access while reducing leaks and energy consumption.
-
-## 🧠 The Intelligence Layer
-
-### 1. Pressure Optimization Formula
-EquiFlow doesn't just "monitor"; it solves. The system minimizes the deviation from target pressure across all wards using a constrained optimization logic:
-
-$$ \text{Minimize: } \sum |P_i - P_{\text{target}}| $$
-$$ \text{Subject to: } \text{Valve constraints, Pump capacity, Safety thresholds} $$
-
-### 2. Equity Index Score
-We introduced a new municipal metric to quantify distribution fairness:
-$$ \text{Equity Score} = 1 - \left( \frac{\sigma(P)}{\max(P)} \right) $$
-Our system typically improves the Equity Index from **62% to 94%** within minutes of activation.
-
-### 3. AI Depth
-- **Anomaly Detection**: Uses Z-score statistical analysis ($Z = \frac{x - \mu}{\sigma}$) to filter noise before AI classification.
-- **Demand Forecasting**: Hybrid model combining historical moving averages with Gemini-powered pattern recognition.
-- **Leak Detection**: Real-time identification of sudden pressure drops ($>2.5\sigma$) correlated with valve state.
-
-## 🏗️ Architecture
-
-```mermaid
-graph TD
-    A[IoT Sensors] -->|MQTT/LoRaWAN| B[Simulation Gateway]
-    B -->|Telemetry| C[SQLite Time-Series]
-    C --> D[AI Optimization Engine]
-    D -->|Mathematical Solver| E[Valve Control Logic]
-    E -->|Feedback Loop| A
-    D -->|Insights| F[React Dashboard]
-    F -->|Equity Index| G[Municipal Decision Support]
-```
-
-## 🚀 Deployment
-
-### Prerequisites
-- Node.js 20+
-- Gemini API Key
-
-### Quick Start
-```bash
-# Install dependencies
-npm install
-
-# Set environment variables
-cp .env.example .env
-
-# Start development server
-npm run dev
-```
-
-### Production (Docker)
-```bash
-docker build -t equiflow-ai .
-docker run -p 3000:3000 equiflow-ai
-```
-
-## 📊 Measurable Impact
-- **24% Leak Reduction**: Through intelligent pressure smoothing.
-- **15% Energy Savings**: Optimized pump schedules based on demand forecasting.
-- **94% Equity Index**: Guaranteed minimum pressure for tail-end consumers.
+## 🚀 Overview
+A real-time IoT-based system that monitors water flow and pressure, detects anomalies, and automatically controls the pipeline while providing live dashboard updates and instant alerts.
 
 ---
-*Built for the Future of Urban Infrastructure.*
+
+## 🎯 Problem
+Traditional water systems are manual, reactive, and lack real-time monitoring, leading to water wastage, leaks, and delayed response.
+
+---
+
+## 💡 Solution
+A closed-loop intelligent system that:
+- Monitors flow and pressure  
+- Detects abnormal conditions  
+- Automatically controls water flow  
+- Sends alerts and updates dashboard  
+
+---
+
+## ⚙️ Architecture
+
+ <img width="979" height="794" alt="image" src="https://github.com/user-attachments/assets/d5f8b62b-8e37-4c35-bee4-bf9d6ae220e5" />
+
+---
+
+## 🔧 Components
+- ESP32  
+- YF-S401 Flow Sensor  
+- Potentiometer (pressure simulation)  
+- Relay Module  
+- DC Pump  
+- Buzzer & LEDs  
+- Power Supply + Buck Converter  
+
+---
+
+## 💻 Tech Stack
+- Arduino IDE (Embedded C++)  
+- Firebase Realtime Database  
+- HTML, CSS, JavaScript (Dashboard)  
+- Chart.js  
+- Telegram Bot API  
+
+---
+
+## 🔄 Working
+1. Sensors collect data  
+2. ESP32 processes and detects anomalies  
+3. System triggers:
+   - 🟢 Normal  
+   - 🟡 Warning  
+   - 🔴 Critical  
+4. In critical:
+   - Valve closes  
+   - Buzzer alerts  
+   - Telegram notification sent  
+5. Data updates to Firebase  
+6. Dashboard shows live data  
+7. User can control system remotely  
+
+---
+
+## 🤖 AI/ML
+Rule-based anomaly detection with future scope for ML-based prediction and forecasting.
+
+---
+
+## ⚠️ Limitations
+- Potentiometer used for pressure simulation  
+- Single-node prototype  
+- Requires Wi-Fi  
+
+---
+
+## 🚀 Future Scope
+- Replace with industrial pressure sensor (G1/4)  
+- AI-based predictive analytics  
+- Smart city deployment  
+- Mobile app integration  
+
+---
+
+## ▶️ Setup
+1. Upload code to ESP32  
+2. Connect hardware  
+3. Power ON  
+4. Connect WiFi  
+5. Open dashboard  
+6. Monitor & control system  
+
+---
+
+## 🌍 Impact
+- Reduces water wastage  
+- Prevents pipeline damage  
+- Enables smart water infrastructure  
+
+---
+
+## 🏁 Conclusion
+A scalable, low-cost, intelligent system for real-time water monitoring and automated control.
+
+---
+
+## 📌 One Line
+> Detects, decides, and acts — making water systems intelligent.
+
+---
+
+## 👩‍💻 Team
+- Shreya B Yadav
