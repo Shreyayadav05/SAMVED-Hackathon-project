@@ -113,3 +113,7 @@ A scalable, low-cost, intelligent system for real-time water monitoring and auto
 
 ## 👩‍💻 Team
 - Shreya B Yadav
+- Likhitha C Y
+- Nisha V Pawar
+- Priya M Chikkeri
+- Rakshitha G R
